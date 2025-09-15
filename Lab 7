@@ -3,30 +3,39 @@
 #include <iostream>
 using namespace std;
 
+//function to reverse the names
 void reverseArray(string *names){
-  for (int i=0; i=3/2 ; i++){
+  for (int i=0; i<4/2 ; i++){
     string temp = *(names + i);
-    *(names + i) = *(names + (2 - i));
-    *(names + (2 - i)) = temp;
+    *(names + i) = *(names + (3 - i));
+    *(names + (3 - i)) = temp;
   }
-  return names;
 }
 
+//function to outout names
 void displayArray(string *names){
   for (int i=0 ; i<=3 ; i++){
-    cout << *(names+1);
+    cout << *(names+i);
   }
   cout << endl;
 }
 
 int main(){
-  
-  string *names = new string[4];
-    * (name+0) = "Joe";
-    * (name+1) = "Toe";
-    * (name+0) = "Roe";
-    * (name+1) = "Boe";
 
+  string *names = new string[4];
+    * (names+0) = "Joe ";
+    * (names+1) = "Toe ";
+    * (names+2) = "Roe ";
+    * (names+3) = "Boe ";
+
+  cout << "Original array: ";
+  displayArray(names);
+  reverseArray(names);
+  cout << "Reversed Array: ";
+  displayArray(names);
+
+  delete[] names;
+  return 0;
 }
 
 
