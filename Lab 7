@@ -3,3 +3,31 @@
 #include <iostream>
 using namespace std;
 
+void reverseArray(string *names){
+  for (int i=0; i=3/2 ; i++){
+    string temp = *(names + i);
+    *(names + i) = *(names + (2 - i));
+    *(names + (2 - i)) = temp;
+  }
+  return names;
+}
+
+void displayArray(string *names){
+  for (int i=0 ; i<=3 ; i++){
+    cout << *(names+1);
+  }
+  cout << endl;
+}
+
+int main(){
+  
+  string *names = new string[4];
+    * (name+0) = "Joe";
+    * (name+1) = "Toe";
+    * (name+0) = "Roe";
+    * (name+1) = "Boe";
+
+}
+
+
+
