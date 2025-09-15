@@ -5,16 +5,16 @@ using namespace std;
 
 //function to reverse the names
 void reverseArray(string *names){
-  for (int i=0; i<4/2 ; i++){
+  for (int i=0; i<5/2 ; i++){
     string temp = *(names + i);
-    *(names + i) = *(names + (3 - i));
-    *(names + (3 - i)) = temp;
+    *(names + i) = *(names + (4 - i));
+    *(names + (4 - i)) = temp;
   }
 }
 
 //function to outout names
 void displayArray(string *names){
-  for (int i=0 ; i<=3 ; i++){
+  for (int i=0 ; i<=4 ; i++){
     cout << *(names+i);
   }
   cout << endl;
@@ -22,11 +22,12 @@ void displayArray(string *names){
 
 int main(){
 
-  string *names = new string[4];
+  string *names = new string[5];
     * (names+0) = "Joe ";
     * (names+1) = "Toe ";
     * (names+2) = "Roe ";
     * (names+3) = "Boe ";
+    * (names+4) = "Ooh ";
 
   cout << "Original array: ";
   displayArray(names);
